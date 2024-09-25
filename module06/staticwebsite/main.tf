@@ -7,11 +7,12 @@ locals {
 }
 
 resource "random_string" "random_string" {
-    length = 8
+    length = 9
     special = false
     upper = false
 }
 
+#Creating resource group
 resource "azurerm_resource_group" "rg_web" {
   name     = local.rg_name
   location = var.location
